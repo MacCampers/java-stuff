@@ -1,0 +1,13 @@
+package projetEnumere;
+
+public class Test {
+
+	public static void main(String[] args) {
+		testSemaine();
+	}
+	
+	public static void testSemaine() {
+		
+	}
+
+}

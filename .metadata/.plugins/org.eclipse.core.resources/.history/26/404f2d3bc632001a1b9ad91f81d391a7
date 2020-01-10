@@ -1,0 +1,15 @@
+package projetImprimante;
+
+public class Centraliseur {
+	private static Imprimante instance;
+
+	private Centraliseur() {
+		
+	}
+
+	public static Centraliseur getInstance() {
+		if (instance == null)
+			instance = new Imprimante();
+		return instance;
+	}
+}

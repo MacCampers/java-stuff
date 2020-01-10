@@ -1,0 +1,11 @@
+package projetImprimante;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Poste P1 = nes Poste("Poste1");
+		Poste P2 = nes Poste("Poste2");
+		Poste P3 = nes Poste("Poste3");
+	}
+
+}

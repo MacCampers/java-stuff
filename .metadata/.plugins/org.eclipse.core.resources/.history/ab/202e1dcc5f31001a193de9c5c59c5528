@@ -1,0 +1,7 @@
+package model;
+
+public class Groupe {
+	private String nom;
+	private Personne[] personnes = new Personne[10];
+
+}

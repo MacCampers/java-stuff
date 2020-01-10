@@ -1,0 +1,19 @@
+package projetImprimante;
+
+public class Centraliseur {
+	private static Imprimante instance;
+
+	private Centraliseur() {
+		
+	}
+
+	public static Imprimante getInstance(String message) {
+		if (instance == null)
+			instance = new Imprimante(message, "IP1");
+		else {
+			instance = new Imprimante(message, "IP2");
+			instance = null;
+		}
+		return instance;
+	}
+}

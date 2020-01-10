@@ -1,0 +1,26 @@
+package projetEleve;
+
+public class Prof {
+	private String name;
+	private int note;
+	private Eleve[] tabEleve;
+
+	public Prof(String name) {
+		this.name = name;
+	}
+
+	public void setNote(int note) {
+		this.note = note;
+		notifyAll();
+	}
+	
+	public void notifyAll() {
+		for( Eleve e: tabEleve)
+			e.notif();
+	}
+	
+
+	public void setEleve(Eleve[] tabEleve) {
+		this.tabEleve = tabEleve;
+	}
+}

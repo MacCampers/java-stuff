@@ -1,0 +1,10 @@
+package model;
+
+public class InfoProprio {
+	private String nom;
+	private String prenom;
+	
+	public String toString() {
+		return "InfoProprio [nom=" + nom + ", prenom=" + prenom + "]";
+	}
+}

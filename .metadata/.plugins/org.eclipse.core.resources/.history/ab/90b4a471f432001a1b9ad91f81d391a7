@@ -1,0 +1,17 @@
+package projetCommande;
+
+public enum Plat {
+	coca(2),
+	eau(1),
+	sans;
+	
+	private int nombre;
+	
+	Plat(int nombre) {
+		
+	}
+	
+	Plat() {
+		
+	}
+}

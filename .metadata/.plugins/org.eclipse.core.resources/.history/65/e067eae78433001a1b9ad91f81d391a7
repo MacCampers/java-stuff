@@ -1,0 +1,28 @@
+package projetCommande;
+
+public enum Dessert {
+	fruit(2), gateau(1), sans;
+
+	private int prix;
+
+	Dessert(int prix) {
+		this.prix = prix;
+	}
+
+	Dessert() {
+
+	}
+
+	public int getDessertPrix() {
+		return this.prix;
+	}
+
+	public String toString() {
+		String str;
+		if (this.prix == 0) 
+			str = "Pas de Plat";
+		else
+			str = name() + " " + prix + "€";
+		return str;
+	}
+}

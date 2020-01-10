@@ -1,0 +1,7 @@
+package projetEnumere;
+
+public class Commande {
+	private Plat plat = Pla;
+	private Dessert dessert;
+	private Boisson boisson;
+}

@@ -1,0 +1,9 @@
+package projetSingleton;
+
+public class projetSingleton {
+
+	public static void main(String[] args) {
+
+	}
+
+}

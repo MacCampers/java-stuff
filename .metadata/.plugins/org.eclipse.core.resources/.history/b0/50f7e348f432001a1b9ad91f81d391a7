@@ -1,0 +1,5 @@
+package projetCommande;
+
+public enum Boisson {
+
+}

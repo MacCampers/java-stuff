@@ -1,0 +1,13 @@
+package projetImprimante;
+
+public class Imprimante {
+
+	public Imprimante(String message) {
+		print(message);
+	}
+	
+	public void print(String message) {
+		System.out.println(message);
+	}
+	
+}

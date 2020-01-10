@@ -1,0 +1,15 @@
+package projetImprimante;
+
+public class Imprimante {
+	private String name;
+	
+	public Imprimante(String posteName, String message, String name) {
+		this.name = name;
+		print(message, posteName);
+	}
+	
+	public void print(String posteName,String message) {
+		System.out.println(posteName + "\t" + message + "\t" + name);
+	}
+	
+}

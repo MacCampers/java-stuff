@@ -1,0 +1,19 @@
+package projetSingleton;
+
+public class Personne {
+	private String nom = "Dupond";
+	private static Personne personne;
+	
+	private Personne() {
+	}
+	
+	 private static Personne INSTANCE = new Personne();
+    
+	    public static Personne getInstance()
+	    {   return INSTANCE;
+	    }
+
+	public String toString() {
+		return "Personne [nom=" + nom + "]";
+	}
+}

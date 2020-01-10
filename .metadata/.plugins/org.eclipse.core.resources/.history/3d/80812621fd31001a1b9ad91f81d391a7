@@ -1,0 +1,6 @@
+package model;
+
+public class InfoProprio {
+	private String nom;
+	private String prenom;
+}

@@ -1,0 +1,19 @@
+package User;
+
+import model.*;
+
+public class Test {
+	public static void main(String[] args) {
+		test1();
+	}
+
+	static void test1() {
+		InfoProprio proprio = new InfoProprio("Charles", "Dupond");
+		Voitures p1 = new Voitures(0,proprio , "Renault", "testmat");
+		Voitures p2 = new Voitures(130,proprio , "Twingo", "testmat123");
+		Voitures[] tab = {p1, p2}; 
+		Parking parking = new Parking("TestParking", tab);
+		System.out.println(parking);
+		p1.setVitesse(150);
+	}
+}

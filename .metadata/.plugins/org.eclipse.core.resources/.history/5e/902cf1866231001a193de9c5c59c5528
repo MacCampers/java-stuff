@@ -1,0 +1,16 @@
+package model;
+
+public class Groupe {
+	private String nom;
+	private Personne[] personnes;
+	
+	public Groupe(String nom, int taille) {
+		this.nom = nom;
+		personnes = new Personne[taille];
+	}
+	
+	public boolean add(Personne p) {
+		boolean res= false;
+		return res;
+	}
+}

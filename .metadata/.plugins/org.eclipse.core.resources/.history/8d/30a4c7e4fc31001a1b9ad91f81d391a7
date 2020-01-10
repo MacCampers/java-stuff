@@ -1,0 +1,25 @@
+package model;
+
+public class Voitures {
+	private int vitesse;
+	public final int vitesseMin = 0;
+	public final int vitesseMax = 300;
+	public final int vitesseFlash = 120;
+	private int flash = 0; // a incrementer quand on passe au dessus de vitesseFlash
+	
+	public Voitures(int vitesse, InfoProprio proprio, String matricule, String marque) {
+		this.vitesse = vitesse;
+	}
+
+	public int getFlash() {
+		return flash;
+	}
+
+	public void setVitesse(int vitesse) {
+		this.vitesse = vitesse;
+	}
+
+	public String toString() {
+		return "Voitures [vitesse=" + vitesse + "]";
+	}
+}

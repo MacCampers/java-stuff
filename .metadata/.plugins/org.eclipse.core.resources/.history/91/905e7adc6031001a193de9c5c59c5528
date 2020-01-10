@@ -1,0 +1,11 @@
+package model;
+
+public class Groupe {
+	private String nom;
+	private Personne[] personnes;
+	
+	public Groupe(String nom, int taille) {
+		this.nom = nom;
+		tab = new Personne[taille];
+	}
+}

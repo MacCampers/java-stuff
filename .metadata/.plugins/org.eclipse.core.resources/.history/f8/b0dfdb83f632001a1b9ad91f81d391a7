@@ -1,0 +1,21 @@
+package projetCommande;
+
+public enum Plat {
+	duJour(2),
+	salade(1),
+	riz;
+	
+	private int prix;
+	
+	Plat(int prix) {
+		this.prix = prix;
+	}
+	
+	Plat() {
+		
+	}
+	
+	public String toString() {
+		return "name: " + name() + " prix: " + prix + "€";
+	}
+}

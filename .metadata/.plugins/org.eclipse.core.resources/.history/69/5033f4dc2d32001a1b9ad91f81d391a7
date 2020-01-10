@@ -1,0 +1,17 @@
+package projetSingleton;
+
+public class projetSingleton {
+
+	public static void main(String[] args) {
+		test1();
+	}
+
+	static void test1() {
+		Personne p1 = new Personne();
+		Personne p2 = new Personne();
+		System.out.println(p1);
+		System.out.println(p2);
+		
+	}
+
+}

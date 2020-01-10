@@ -1,0 +1,28 @@
+package projetCommande;
+
+public enum Boisson {
+	coca(2), eau(1), sans;
+
+	private int prix;
+
+	Boisson(int prix) {
+		this.prix = prix;
+	}
+
+	Boisson() {
+
+	}
+
+	public int getBoissonPrix() {
+		return this.prix;
+	}
+
+	public String toString() {
+		String str;
+		if (this.prix == 0) 
+			str = "Pas de Boisson";
+		else
+			str = name() + " " + prix + "€";
+		return str;
+	}
+}

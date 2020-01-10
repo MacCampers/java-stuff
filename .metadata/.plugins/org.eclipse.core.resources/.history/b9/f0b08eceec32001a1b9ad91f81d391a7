@@ -1,0 +1,23 @@
+package projetEnumere;
+
+public enum Formation {
+	java(500),
+	python(300),
+	cpp(100),
+	html(0),
+	csharp(250);
+	
+	private int prix;
+	
+	private Formation(int prix) {
+		this.prix = prix;
+	}
+	
+	private Formation() {
+		
+	}
+
+	public int getPrix() {
+		return prix;
+	}
+}

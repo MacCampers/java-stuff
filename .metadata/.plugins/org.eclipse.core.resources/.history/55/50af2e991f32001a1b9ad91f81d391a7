@@ -1,0 +1,15 @@
+package projectStatic;
+
+public class projetStatic {
+
+	public static void main(String[] args) {
+		test1();
+	}
+	
+	static void test1() {
+		A.m1();
+		A a = new A();
+		a.m3();
+		new A().m4();
+	}
+}

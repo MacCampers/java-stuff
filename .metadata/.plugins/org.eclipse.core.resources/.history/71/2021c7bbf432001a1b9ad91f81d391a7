@@ -1,0 +1,24 @@
+package projetCommande;
+
+import java.util.Scanner;
+
+import projetEnumere.Formation;
+
+public class Test {
+
+	public static void main(String[] args) {
+		test();
+	}
+	
+	public static void test() {
+		Scanner sc = new Scanner(System.in);
+		Dessert[] tab = Dessert.values();
+		System.out.println("Quel Dessert voulez vous");
+		for(Dessert f: tab)
+			System.out.print(f.name() + "\t");
+		String choix = sc.nextLine();
+		Dessert f = Dessert.valueOf(choix);
+		System.out.println(f);
+	}
+
+}

@@ -1,0 +1,19 @@
+package projetCommande;
+
+public class Commande {
+	private Plat plat;
+	private Dessert dessert;
+	private Boisson boisson;
+	private int prix;
+	private String paramChoisi;
+	
+	Commande(Plat plat, Dessert dessert, Boisson boisson, String paramChoisi) {
+		
+	}
+	
+	public int getPrixTotal() {
+		
+		return prix;
+	}
+	
+}

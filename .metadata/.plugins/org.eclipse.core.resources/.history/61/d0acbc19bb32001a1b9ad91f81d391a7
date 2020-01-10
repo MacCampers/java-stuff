@@ -1,0 +1,17 @@
+package projetSingleton;
+
+class Personne {
+
+	private static Personne personne;
+
+	private Personne() {
+	}
+
+	public static Personne getInstance() {
+		if (personne == null) {
+			personne = new Personne();
+		}
+
+		return personne;
+	}
+}

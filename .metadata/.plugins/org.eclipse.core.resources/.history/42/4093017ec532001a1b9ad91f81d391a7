@@ -1,0 +1,7 @@
+package projetImprimante;
+
+public class Poste {
+	
+	public Poste(String message) {
+	}
+}

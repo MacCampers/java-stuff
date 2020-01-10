@@ -1,0 +1,10 @@
+package projetEnumere;
+
+public enum Civilite {
+	lundi,
+	mardi,
+	mercredi,
+	jeudi,
+	vendredi,
+	we
+}

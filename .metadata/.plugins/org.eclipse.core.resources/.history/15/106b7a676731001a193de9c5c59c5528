@@ -1,0 +1,41 @@
+package model;
+
+import java.util.Arrays;
+
+public class Groupe {
+	private String nom;
+	private Personne[] tab;
+
+	public Groupe(String nom, int taille) {
+		this.nom = nom;
+		tab = new Personne[taille];
+	}
+
+	public boolean add(Personne p) {
+		boolean res = false;
+		for (int i = 0; i < tab.length; i++) {
+			if (tab[i] == null) {
+				tab[i] = p;
+				res = true;
+				break;
+			}
+		}
+		return res;
+	}
+
+	public boolean remove(int id) {
+		boolean res = false;
+		return res;
+	}
+
+	public String toString() {
+		String str = "Groupe [nom=" + nom + ",";
+		for (Personne p : tab) {
+			if (p != null)
+				str += "\n" + p;
+		}
+		str += "]";
+		return str;
+	}
+
+}

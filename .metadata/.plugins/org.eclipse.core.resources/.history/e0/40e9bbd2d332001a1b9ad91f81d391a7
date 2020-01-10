@@ -1,0 +1,13 @@
+package projetEleve;
+
+public class Prof {
+	private String name;
+	private int note;
+	private Eleve[] tabEleve;
+	
+	public Prof(String name) {
+		this.name = name;
+	}
+	
+	
+}
