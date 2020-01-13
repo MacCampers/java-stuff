@@ -5,7 +5,7 @@ public enum Plat {
 	salade(1),
 	riz;
 	
-	private int prix;
+	private int prix = 0;
 	
 	Plat(int prix) {
 		this.prix = prix;

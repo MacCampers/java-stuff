@@ -25,7 +25,7 @@ public class Commande {
 		if (paramChoisi.equalsIgnoreCase("A"))
 			str = "Prix total : " + getPrixTotal() + "€";
 		else
-			str = "Détail :\n" + this.plat.toString() + "\n"  + this.dessert.toString() + "\n" + this.boisson.toString();
+			str = "Détail :\n" + this.plat.toString() + "\n"  + this.dessert.toString() + "\n" + this.boisson.toString() + "\nTOTAL: " + getPrixTotal() + "€";
 		return str;
 	}
 	

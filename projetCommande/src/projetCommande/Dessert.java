@@ -3,7 +3,7 @@ package projetCommande;
 public enum Dessert {
 	fruit(2), gateau(1), sans;
 
-	private int prix;
+	private int prix = 0;
 
 	Dessert(int prix) {
 		this.prix = prix;
