@@ -6,8 +6,8 @@ public class Velo extends Vehicule {
 		super(marque, prix);
 	}
 	
-	public void avancer() {
-		super.avancer("Je roule à deux roues");
+	public String avancer() {
+		return "Je roule à deux roues";
 	}
 	
 }

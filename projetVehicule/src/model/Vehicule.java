@@ -9,8 +9,8 @@ public class Vehicule {
 		this.prix = prix;
 	}
 	
-	public String avancer(String moyen) {
-		return moyen;
+	public String avancer() {
+		return "j'avance vehicule";
 	}
 
 	public String toString() {

@@ -8,8 +8,8 @@ public class Bateau extends Vehicule {
 		this.ebateau = ebateau;
 	}
 	
-	public void avancer() {
-		super.avancer("Je flotte");
+	public String avancer() {
+		return "Je flotte";
 	}
 	
 	
