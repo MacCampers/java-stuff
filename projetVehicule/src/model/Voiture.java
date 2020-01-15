@@ -14,6 +14,11 @@ public class Voiture extends Vehicule {
 	public String avancer() {
 		return "Je roule";
 	}
+	
+	public String démarrer() {
+		return "Je démarre voiture";
+	}
+
 
 	public String toString() {
 		return "Voiture [gps=" + gps + "]";

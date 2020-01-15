@@ -1,6 +1,0 @@
-package model;
-
-public class InfoVoiture {
-	private String matricule;
-	private String marque;
-}

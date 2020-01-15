@@ -7,11 +7,13 @@ public class Bateau extends Vehicule {
 		super(marque, prix);
 		this.ebateau = ebateau;
 	}
-	
+
 	public String avancer() {
 		return "Je flotte";
 	}
-	
-	
-	
+
+	public String demarrer() {
+		return "bateau démarrée";
+	}
+
 }

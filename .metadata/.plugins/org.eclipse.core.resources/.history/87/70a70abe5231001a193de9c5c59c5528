@@ -1,6 +1,0 @@
-package model;
-
-public class Rib {
-	private String banque;
-	private String compte;
-}
