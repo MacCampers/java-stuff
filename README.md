@@ -1,3 +1,3 @@
 # JavaProjects
 
-All Java Project tests for CGI
+All Java Project tests
