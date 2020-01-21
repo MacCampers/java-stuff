@@ -1,0 +1,14 @@
+package model;
+
+public class B extends A {
+	private int z;
+	
+	public B(int x, int y, int z) {
+		super(x, y);
+		this.z = z;
+	}
+
+	public String toString() {
+		return super.toString() + " [z=" + z + "]";
+	}
+}

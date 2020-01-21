@@ -1,0 +1,10 @@
+package model;
+
+public class TroisD extends DeuxD {
+	private int z;
+
+	public String toString() {
+		return super.toString() + ", z=" + z + "]";
+	}
+	
+}

@@ -1,0 +1,7 @@
+package projetTriable;
+
+import java.util.Comparator;
+
+public class CompareMarque implements Comparator<Article> {
+
+}

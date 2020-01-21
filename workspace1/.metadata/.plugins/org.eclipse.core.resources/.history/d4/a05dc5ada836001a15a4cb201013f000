@@ -1,0 +1,20 @@
+package projetBanque;
+
+public class CompteSimple {
+	private String nom;
+	private int solde;
+	private final int cadeau = 20;
+	private final int com = 1;
+	
+	public CompteSimple(int nom, int solde) {
+		this.nom = nom;
+		this.solde = solde;
+	}
+	
+	public CompteSimple(int nom) {
+		this.nom = nom;
+		this.solde = cadeau;
+	}
+	
+	
+}

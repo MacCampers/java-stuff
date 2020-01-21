@@ -1,0 +1,18 @@
+package projetGeneric;
+
+public class Test {
+
+	public static void main(String[] args) {
+		test1();
+	}
+
+	static void test1() {
+		Traitement t1 = new Traitement();
+		t1.setA(10);
+		System.out.println(t1.getA());
+		
+		Traitement t2 = new Traitement();
+		t2.setA(10);
+		System.out.println(t2.getA());
+	}
+}

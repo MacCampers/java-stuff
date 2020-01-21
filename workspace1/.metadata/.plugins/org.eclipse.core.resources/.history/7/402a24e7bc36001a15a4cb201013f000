@@ -1,0 +1,14 @@
+package model;
+
+public class Test {
+
+	public static void main(String[] args) {
+		test1();
+	}
+	
+	public static void test1() {
+		A a = new A();
+		System.out.println(a.m1());
+	}
+
+}

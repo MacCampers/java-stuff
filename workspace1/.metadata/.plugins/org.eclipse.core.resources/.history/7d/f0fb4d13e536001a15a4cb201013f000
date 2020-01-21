@@ -1,0 +1,17 @@
+package projetTriable;
+
+public class Personne {
+	private String nom;
+	private String prennom;
+	private int age;
+	
+	public Personne(String nom, String prennom, int age) {
+		this.nom = nom;
+		this.prennom = prennom;
+		this.age = age;
+	}
+	
+	public String toString() {
+		return "Personne [nom=" + nom + ", prennom=" + prennom + ", age=" + age + "]";
+	}
+}

@@ -1,0 +1,14 @@
+package projetGeneric;
+
+public class Traitement {
+	private Object a;
+
+	public Object getA() {
+		return a;
+	}
+
+	public void setA(Object a) {
+		this.a = a;
+	}
+
+}

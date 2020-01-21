@@ -1,0 +1,13 @@
+package model;
+
+public enum Ebateau {
+	petit(2),
+	moyen(10),
+	grand(50);
+	
+	private int taille;
+	
+	private Ebateau(int taille) {
+		
+	}
+}
