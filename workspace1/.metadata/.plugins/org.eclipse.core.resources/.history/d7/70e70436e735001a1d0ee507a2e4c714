@@ -1,7 +1,0 @@
-package model;
-
-public class D extends C {
-	public void m4() {
-		System.out.println("je suis m4 de D");
-	}
-}

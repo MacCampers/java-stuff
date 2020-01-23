@@ -1,7 +1,0 @@
-package projetEnumere;
-
-public enum Semaine {
-	mr, 
-	mmle,
-	mme
-}

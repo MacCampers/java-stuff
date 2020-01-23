@@ -1,8 +1,0 @@
-package projectStatic;
-
-public class projetStatic {
-
-	public static void main(String[] args) {
-		
-	}
-}

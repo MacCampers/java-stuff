@@ -1,5 +1,0 @@
-package projectInterface;
-
-public interface I3 extends I2, I1 implements B {
-	
-}

@@ -1,7 +1,0 @@
-package projectInterface;
-
-public class A {
-	public void mA() {
-		System.out.println("je suis m1 de A");
-	}
-}

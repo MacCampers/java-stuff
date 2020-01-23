@@ -1,6 +1,0 @@
-package model;
-
-public class DeuxD {
-	private int x;
-	private int y;
-}

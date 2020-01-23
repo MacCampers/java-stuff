@@ -1,6 +1,0 @@
-package projetBanque;
-
-public class CompteCB extends CompteSimple {
-	private CB cb;
-	
-}

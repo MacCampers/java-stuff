@@ -1,7 +1,0 @@
-package projetEnumere;
-
-public enum Formation {
-	mr, 
-	mmle,
-	mme
-}

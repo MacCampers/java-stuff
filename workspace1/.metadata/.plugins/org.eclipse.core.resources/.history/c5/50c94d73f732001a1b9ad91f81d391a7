@@ -1,9 +1,0 @@
-package projetCommande;
-
-public class Commande {
-	private Plat plat;
-	private Dessert dessert;
-	private Boisson boisson;
-	private String client;
-	
-}

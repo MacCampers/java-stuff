@@ -1,9 +1,0 @@
-package model;
-
-public class TroisD extends DeuxD {
-	private int x;
-	private int y;
-	private int z;
-	
-	
-}
