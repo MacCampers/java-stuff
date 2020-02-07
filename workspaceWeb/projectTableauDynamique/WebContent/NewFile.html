@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>Insert your fruit</h2>
+
+	<input type="text" id="inputId" placehorder="here" />
+	<button onclick="add()">add</button>
+	<button onclick="sort()">sort</button>
+	<button onclick="print()">print</button>
+	<button onclick="deleteFirst()">delete</button>
+
+	<p id="demo"></p>
+
+	<script>
+		var fruits, text, fLen, i, fruitEntered;
+		fruits = [];
+
+		function add() {
+			fruitEntered = document.getElementById("inputId").value;
+			if (fruitEntered != "")
+				fruits.push(fruitEntered);
+			document.getElementById("inputId").value = "";
+		}
+
+		function sort() {
+			fruits.sort();
+		}
+
+		function deleteFirst() {
+			fruits.shift();
+		}
+
+		function print() {
+			fLen = fruits.length;
+			if (fLen > 0) {
+				text = "<table><thead><tr><th>position</th><th>nom</th></tr></thead><tbody>";
+				for (i = 0; i < fLen; i++) {
+					text += "<tr>";
+					text += "<td>" + i + "</td>"
+					text += "<td>" + fruits[i] + "</td>"
+					text += "</tr>"
+				}
+				text += "</tbody></table>";
+				document.getElementById("demo").innerHTML = text;
+			} else {
+				document.getElementById("demo").innerHTML = "Nothing to see here :/";
+			}
+		}
+	</script>
+
+</body>
+</html>

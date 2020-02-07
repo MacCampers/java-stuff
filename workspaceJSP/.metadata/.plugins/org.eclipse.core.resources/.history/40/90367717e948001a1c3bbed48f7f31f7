@@ -1,0 +1,28 @@
+package src.model;
+
+public class Authentification {
+	private String nom;
+	private String message;
+
+	public Authentification(String nom) {
+		this.nom = nom;
+		getMessageType();
+	}
+
+	private void getMessageType() {
+		if (nom.equals("titi") || nom.equals("toto") || nom.equals("dupond"))
+			this.message = "OK";
+		else
+			this.message = "Erreur";
+
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+}

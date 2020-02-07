@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculette</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="index.js"></script>
+
+</head>
+<body>
+
+	<div id="calculator">
+		<div id="screen" class="col-xs-12">
+			<input type="number" id="nb1"> <input type="number" id="nb2">
+		</div>
+		<button id="add" class="operator col-xs-3" onclick="testCalcul('+')">+</button>
+		<button id="substract" class="operator col-xs-3"
+			onclick="testCalcul('-')">-</button>
+		<button id="divide" class="operator col-xs-3"
+			onclick="testCalcul('/')">/</button>
+		<button id="multiply" class="operator col-xs-3"
+			onclick="testCalcul('*')">x</button>
+		<button id="clear" class="eraser col-xs-3">AC</button>
+		<div id="screen" class="col-xs-12">
+			<div id="answer"></div>
+		</div>
+	</div>
+</body>
+</html>

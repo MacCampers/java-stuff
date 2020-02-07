@@ -1,0 +1,22 @@
+package dao;
+
+import java.sql.DriverManager;
+
+import com.mysql.jdbc.*;
+
+public class DAOPersonne {
+
+	public void create(int idPatient, int numSalle, int medecin) throws ClassNotFoundException, SQLException {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hopital", "root", "root");
+
+		String sql = "INSERT INTO visite(id_patient,date,num_salle,medecin) VALUES(?,sysdate(),?,?)";
+		PreparedStatement st = conn.prepareStatement(sql);
+		st.setInt(1, idPatient);
+		st.setInt(2, numSalle);
+		st.setInt(3, medecin);
+
+		st.executeUpdate();
+		conn.close();
+	}
+}

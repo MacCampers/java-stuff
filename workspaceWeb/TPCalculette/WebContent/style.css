@@ -1,0 +1,99 @@
+HTML CSS JSResult
+body {
+  background-color: #F2F2F2;
+}
+
+#calculator {
+  position: absolute;
+  width: 20em;
+  height: 28em;
+  background-color: #1A1A1A;
+}
+
+#screen input {
+	width: 100%;
+}
+
+#screen div {
+  width: 100%;
+}
+
+#answer {
+  margin: 0.5em 0;
+  height: 1.5em;
+  font-size: 2.5em;
+  color: white;
+}
+
+#answer p {
+  margin: 0 0.2em;
+  float: right;
+}
+
+#expression {
+  position: absolute;
+  right: 0;
+  margin: 0.5em 0;
+  font-size: 1em;
+  color: grey;
+}
+
+#expression textarea {
+  width: 100%;
+  height: 4.5em;
+  resize: none;
+  padding: 0 0.5em;
+  background-color: #1A1A1A;
+  border: none;
+}
+
+#expression textarea:focus {
+  outline: none;
+}
+
+#calculator button {
+  border: 0.5px solid #1A1A1A;
+  border-radius: 0;
+}
+
+#calculator button:active {
+  opacity: 0.5;
+}
+
+#calculator button:focus {
+  outline: none;  
+}
+
+.operator,
+.eraser,
+.number,
+#ansSaver {
+  color: grey;
+  height: 3.6em;
+}
+
+.operator,
+.eraser {
+  background-color: #252525;
+}
+
+.number,
+#ansSaver {
+  background-color: #303030;
+}
+
+#equal {
+  height: 7.2em;
+  background-color: #AC92EC;
+  color: #121212;
+}
+
+.bottom-group {
+  padding: 0;
+}
+
+#credit a {
+  color: #60449D;
+}
+
+Resources1×0.5×0.25×Rerun

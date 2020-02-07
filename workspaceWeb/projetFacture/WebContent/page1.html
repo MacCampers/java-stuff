@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Commandes</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+<script src="page2.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-8">
+				<fieldset class="form-group">
+					<div class="row">
+						<legend class="col-form-label col-sm-2 pt-0">Genre</legend>
+						<div class="col-sm-3" id="gridRadios">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="gridRadios"
+									id="gridRadios1" value="Mr" checked> <label
+									class="form-check-label" for="gridRadios1"> Mr </label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="gridRadios"
+									id="gridRadios2" value="Mme"> <label
+									class="form-check-label" for="gridRadios2"> Mme </label>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				<div class="form-group row">
+					<label for="inputName" class="col-sm-2 col-form-label">Client</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="inputName"
+							placeholder="Nom">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-2">Options</div>
+					<div class="col-sm-10">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1"> Détail
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck2">
+							<label class="form-check-label" for="gridCheck2"> Total </label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="inputQuantity" class="col-sm-2 col-form-label">Quantité</label>
+					<div class="col-sm-4">
+						<input type="number" class="form-control" id="inputQuantity"
+							placeholder="quantité">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="inputState" class="col-sm-2 col-form-label">Boisson</label>
+					<div class="col-sm-4">
+						<select id="inputState" class="form-control" onchange="changeBackground()">
+							<option value="4">Coca</option>
+							<option value="3">Sprite</option>
+							<option value="2">Eau</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-10">
+						<button class="btn btn-primary" onclick="getInformation()">Ajouter</button>
+					</div>
+				</div>
+				<p id="person"></p>
+				<p id="detail"></p>
+				<p id="total"></p>
+			</div>
+			<div class="col-4">
+			<div class="coca" id="boissonBackground">
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

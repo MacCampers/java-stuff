@@ -1,0 +1,40 @@
+.container {
+	padding-top: 25px;
+	    background: #fff;
+    border-radius: 10px;
+    box-shadow: 15px 20px 0px rgba(0,0,0,0.1);
+}
+
+.eau {
+	background-image: url('img/eau.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+    height: 250px;
+}
+
+
+.coca {
+	background-image: url('img/coca.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+    height: 250px;
+}
+
+
+.sprite {
+	background-image: url('img/spritejpg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+    height: 300px;
+}
+
+body {
+	background: linear-gradient(#FFB88C, #DE6262);
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding: 200px 0;
+}
