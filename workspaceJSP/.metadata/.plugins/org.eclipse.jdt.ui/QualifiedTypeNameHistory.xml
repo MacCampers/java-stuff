@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
+<fullyQualifiedTypeName name="dao.DAOPersonne"/>
+<fullyQualifiedTypeName name="src.model.Authentification"/>
+<fullyQualifiedTypeName name="model.Personne"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContextEvent"/>
+<fullyQualifiedTypeName name="com.sun.security.ntlm.Client"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="dao.DAOClient"/>
+<fullyQualifiedTypeName name="dao.DAOArticle"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="model.Article"/>
+<fullyQualifiedTypeName name="model.Client"/>
+</qualifiedTypeNameHistroy>

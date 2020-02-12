@@ -1,0 +1,43 @@
+package Listener;
+
+import java.util.ArrayList;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
+import javax.servlet.http.HttpSession;
+
+import model.Article;
+import model.Personne;
+
+/**
+ * Application Lifecycle Listener implementation class ListernerArticles
+ *
+ */
+@WebListener
+public class ListernerArticles implements ServletContextListener {
+
+    /**
+     * Default constructor. 
+     */
+    public ListernerArticles() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+     * @see ServletContextListener#contextDestroyed(ServletContextEvent)
+     */
+    public void contextDestroyed(ServletContextEvent sce)  { 
+         // TODO Auto-generated method stub
+    }
+
+	/**
+     * @see ServletContextListener#contextInitialized(ServletContextEvent)
+     */
+    public void contextInitialized(ServletContextEvent sce)  {
+		ArrayList<Article> list = new ArrayList<Article>();
+		HttpSession session = arg0.getSession();
+		session.setAttribute("list", list);
+    }
+	
+}
