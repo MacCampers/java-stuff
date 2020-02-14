@@ -188,3 +188,7 @@
 2020-02-14 15:10:51,877 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-02-14 15:10:51,878 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-02-14 15:10:51,879 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-02-14 15:17:38,810 [Worker-143] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-02-14 15:17:38,810 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\utilisateur\Desktop\JavaProjects\workspaceJSP\ProjetResto\src\main\resources
+2020-02-14 15:17:38,811 [Worker-143] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-02-14 15:17:38,812 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\utilisateur\Desktop\JavaProjects\workspaceJSP\ProjetResto\src\test\resources
