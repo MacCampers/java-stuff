@@ -1,0 +1,61 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import javax.persistence.*;
+import model.Personne;
+
+@Entity
+public class Projet {
+
+	private int id, version;
+	private String nom;
+	private Collection<Personne> personnes;
+
+	public Projet() {
+		super();
+	}
+
+	public String toString() {
+		return "Departement " + id + ", " + nom;
+	}
+
+	@Id
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	  @ManyToMany(fetch = FetchType.LAZY)
+	    @JoinTable(name = "post_tags",
+	            joinColumns = { @JoinColumn(name = "personne_id") })
+	public Collection<Personne> getPersonnes() {
+		return personnes;
+	}
+
+	public void setPersonnes(Collection<Personne> personnes) {
+		this.personnes = personnes;
+	}
+
+	@Version
+	public int getVersion() {
+		return version;
+	}
+
+	public void setVersion(int version) {
+		this.version = version;
+	}
+
+}

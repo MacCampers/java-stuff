@@ -1,0 +1,122 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.*;
+import model.*;
+
+public class Test {
+
+	public static void main(String[] args) {
+		testConnexion();
+	}
+
+	public static void testConnexion() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb6");
+		EntityManager em = emf.createEntityManager();
+
+		System.out.println("test");
+		em.close();
+		emf.close();
+
+	}
+
+	public static void testCreate() {
+		//init Hopital
+		Hopital h1 = new Hopital();h1.setId(1);h1.setNom("Pasteur");
+		Hopital h2 = new Hopital();h2.setId(2);h2.setNom("Cimiez");
+		//init Coordonnées
+		Coordonnees c1 = new Coordonnees();c1.setAddresse("rue du chien");c1.setTel("02587410");
+		Coordonnees c2 = new Coordonnees();c1.setAddresse("rue du chat");c1.setTel("02896285287858526");
+		//init Patient
+		Patient p1 = new Patient();p1.setId(1);p1.setNom("Dupond");p1.setPrenom("Toto");p1.setCoord(c1);
+		Patient p2 = new Patient();p2.setId(2);p2.setNom("Dupond");p2.setPrenom("Tutu");p1.setCoord(c2);
+		Patient p3 = new Patient();p3.setId(3);p3.setNom("Dupond");p3.setPrenom("Tata");p1.setCoord(c1);
+		//init Salle
+		Salle s1 = new Salle();s1.setId(1);s1.setNom("salle1");s1.setHopital(h1);
+		Salle s2 = new Salle();s2.setId(1);s2.setNom("salle1");s2.setHopital(h2);
+		
+		Collection<Hopital> H1col1 = new ArrayList<Hopital>();col1.add(h1);col1.add(h2);
+		Collection<Hopital> H2col2 = new ArrayList<Hopital>();col1.add(h1);col1.add(h2);
+		
+		p1.setHopital(H1col1);
+		p1.setHopital(H2col2);
+		p3.setHopital(H2col2);
+
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb5");
+		EntityManager em = emf.createEntityManager();
+
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+
+		em.persist(d1);
+		em.persist(d2);
+		em.persist(p1);
+		em.persist(p2);
+		em.persist(p3);
+
+		tx.commit();
+
+		em.close();
+		emf.close();
+	}
+}
+//
+// public static void testFindPersonne() {
+// EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+// EntityManager em = emf.createEntityManager();
+//
+// Personne p1 = em.find(Personne.class, 4);
+//
+// System.out.println(p1);
+//
+// em.close();
+// emf.close();
+// }
+//
+// public static void testFindDepartement() {
+// EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+// EntityManager em = emf.createEntityManager();
+//
+// Projet d56 = em.find(Projet.class, 56);
+//
+// System.out.println(d56);
+//
+// em.close();
+// emf.close();
+//
+// Collection<Personne> collection = d56.getPersonnes();
+//
+// }
+//
+// @SuppressWarnings("unchecked")
+// public static void testFindAll() {
+// EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+// EntityManager em = emf.createEntityManager();
+//
+// Query query = em.createQuery("SELECT p from Personne p");
+// List<Personne> liste = query.getResultList();
+//
+// System.out.println(affiche(liste));
+//
+// em.close();
+// emf.close();
+// }
+//
+// private static String affiche(Collection<Personne> collection) {
+// String res = "";
+// for (Personne p : collection)
+// res += p + "\n";
+// return res;
+// }
+//
+// private static String affiche(List<Personne> liste) {
+// String res = "";
+// for (Personne p : liste)
+// res += p + "\n";
+// return res;
+// }
+// }

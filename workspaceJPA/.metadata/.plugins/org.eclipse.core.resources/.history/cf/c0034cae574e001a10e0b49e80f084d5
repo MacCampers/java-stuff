@@ -1,0 +1,136 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.*;
+import model.*;
+
+public class Test {
+
+	public static void main(String[] args) {
+		testConnexion();
+	}
+
+	public static void testConnexion() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb5");
+		EntityManager em = emf.createEntityManager();
+
+		System.out.println("salo");
+		em.close();
+		emf.close();
+
+	}
+
+	public static void testCreate() {
+		Projet d1 = new Projet();
+		d1.setId(1);
+		d1.setNom("c++");
+
+		Projet d2 = new Projet();
+		d2.setId(2);
+		d2.setNom("cpppez");
+
+		Personne p1 = new Personne();
+		p1.setId(1);
+		p1.setAge(11);
+		p1.setNom("Dupond");
+		p1.setPrenom("Toto");
+
+		Personne p2 = new Personne();
+		p2.setId(2);
+		p2.setAge(12);
+		p2.setNom("Dupond");
+		p2.setPrenom("Tutu");
+
+		Personne p3 = new Personne();
+		p3.setId(3);
+		p3.setAge(13);
+		p3.setNom("Dupond");
+		p3.setPrenom("Tata");
+		
+		Collection<Projet> col1 = new ArrayList<Projet>();
+		col1.add(d1);
+		col1.add(d2);
+		Collection<Projet> col2 = new ArrayList<Projet>();
+		col1.add(d1);
+		col1.add(d2);
+		
+		p1.setDepartement(col1);
+
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+		EntityManager em = emf.createEntityManager();
+
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+
+		em.persist(d1);
+		em.persist(d2);
+		em.persist(p1);
+		em.persist(p2);
+		em.persist(p3);
+
+		tx.commit();
+
+		em.close();
+		emf.close();
+	}
+}
+//
+// public static void testFindPersonne() {
+// EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+// EntityManager em = emf.createEntityManager();
+//
+// Personne p1 = em.find(Personne.class, 4);
+//
+// System.out.println(p1);
+//
+// em.close();
+// emf.close();
+// }
+//
+// public static void testFindDepartement() {
+// EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+// EntityManager em = emf.createEntityManager();
+//
+// Projet d56 = em.find(Projet.class, 56);
+//
+// System.out.println(d56);
+//
+// em.close();
+// emf.close();
+//
+// Collection<Personne> collection = d56.getPersonnes();
+//
+// }
+//
+// @SuppressWarnings("unchecked")
+// public static void testFindAll() {
+// EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+// EntityManager em = emf.createEntityManager();
+//
+// Query query = em.createQuery("SELECT p from Personne p");
+// List<Personne> liste = query.getResultList();
+//
+// System.out.println(affiche(liste));
+//
+// em.close();
+// emf.close();
+// }
+//
+// private static String affiche(Collection<Personne> collection) {
+// String res = "";
+// for (Personne p : collection)
+// res += p + "\n";
+// return res;
+// }
+//
+// private static String affiche(List<Personne> liste) {
+// String res = "";
+// for (Personne p : liste)
+// res += p + "\n";
+// return res;
+// }
+// }

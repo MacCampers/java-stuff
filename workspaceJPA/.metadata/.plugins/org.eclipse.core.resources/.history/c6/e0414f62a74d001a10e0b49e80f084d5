@@ -1,0 +1,62 @@
+package test;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import model.Computer;
+import model.Personne;
+
+public class test {
+
+	public static void main(String[] args) {
+		// testMergev2();
+		testCreate();
+//		testConnexion();
+	}
+
+	static void testConnexion() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb3");
+		EntityManager em = emf.createEntityManager();
+
+		System.out.println("test");
+
+		em.close();
+		emf.close();
+	}
+
+	static void testFind() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb2");
+		EntityManager em = emf.createEntityManager();
+
+		Personne p = em.find(Personne.class, 4);
+
+		em.close();
+		emf.close();
+	}
+
+	static void testCreate() {
+		Computer pc = new Computer();
+		Personne p = new Personne(1, 1, 1, "nom", "prenom", pc);
+		pc.setSN("1");
+		pc.setModel("eee");
+		pc.setVersion(2);
+		pc.setPersonne(p);
+			
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb3");
+		EntityManager em = emf.createEntityManager();
+
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(p);
+
+		tx.commit();
+
+		em.close();
+		emf.close();
+	}
+}

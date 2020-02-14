@@ -1,0 +1,60 @@
+package model;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Departement {
+	private String SN, model;
+	private int version;
+	private Employee personne;
+
+	
+	public Departement(String sN, String model, int version, Employee personne) {
+		SN = sN;
+		this.model = model;
+		this.version = version;
+		this.personne = personne;
+	}
+
+	public Departement() {
+	}
+
+	@Id
+	public String getSN() {
+		return SN;
+	}
+
+	public void setSN(String sN) {
+		SN = sN;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public int getVersion() {
+		return version;
+	}
+
+	public void setVersion(int version) {
+		this.version = version;
+	}
+
+//	@OneToOne(mappedBy = "pc")
+	@OneToOne(mappedBy = "pc", fetch=FetchType.EAGER)
+	public Employee getPersonne() {
+		return personne;
+	}
+
+	public void setPersonne(Employee personne) {
+		this.personne = personne;
+	}
+
+}

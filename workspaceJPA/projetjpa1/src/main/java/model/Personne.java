@@ -65,4 +65,10 @@ public class Personne {
 		this.age = age;
 	}
 
+	@Override
+	public String toString() {
+		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", version=" + version
+				+ "]";
+	}
+
 }

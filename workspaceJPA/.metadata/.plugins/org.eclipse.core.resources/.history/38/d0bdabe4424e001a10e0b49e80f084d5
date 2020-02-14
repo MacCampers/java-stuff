@@ -1,0 +1,38 @@
+package model;
+
+import java.util.Collection;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Departement {
+	private String name;
+	private int id;
+	private Collection<Employee> employees;
+
+	public Departement() {
+	}
+
+	@Id
+	public int getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	// @OneToOne(mappedBy = "pc")
+	@OneToOne(mappedBy = "pc", fetch = FetchType.EAGER)
+	public Employee getPersonne() {
+		return personne;
+	}
+
+	public void setPersonne(Employee personne) {
+		this.personne = personne;
+	}
+
+}

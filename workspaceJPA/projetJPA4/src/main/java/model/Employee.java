@@ -1,0 +1,68 @@
+package model;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Employee {
+
+	private int id;
+	private String nom, prenom;
+	private Departement department;
+
+	public Employee() {
+	}
+
+	public Employee(int id, String nom, String prenom, Departement department) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.department = department;
+	}
+
+	@Id
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name = "DEPARTMENT_ID")
+	public Departement getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Departement department) {
+		this.department = department;
+	}
+
+	@Override
+	public String toString() {
+		return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", pc=" + department + "]";
+	}
+
+}

@@ -1,0 +1,6 @@
+package model;
+
+@Embeddable
+public class Coordonnees {
+
+}

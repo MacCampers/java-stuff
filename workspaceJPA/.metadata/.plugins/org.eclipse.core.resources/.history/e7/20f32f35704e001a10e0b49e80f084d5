@@ -1,0 +1,65 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.*;
+import model.Patient;
+
+@Entity
+public class Hopital {
+
+	private int id;
+	private String nom;
+	private Collection<Patient> patient;
+	private Collection<Salle> salle;
+
+	public Hopital() {
+	}
+
+	public String toString() {
+		return "Departement " + id + ", " + nom;
+	}
+
+	@Id
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(joinColumns = { @JoinColumn(name = "patient_id") },
+            inverseJoinColumns = { @JoinColumn(name = "hopital_id")})
+	public Collection<Patient> getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Collection<Patient> personnes) {
+		this.patient = personnes;
+	}
+
+	@OneToMany(mappedBy="hopital")
+	public Collection<Salle> getSalle() {
+		return salle;
+	}
+
+	public void setSalle(Collection<Salle> salle) {
+		this.salle = salle;
+	}
+	
+	
+
+}

@@ -1,0 +1,103 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import model.Departement;
+import model.Employee;
+
+public class test {
+
+	public static void main(String[] args) {
+		// testMergev2();
+//		testCreate();
+//		testConnexion();
+//		testFindbyPC();
+//		testConnexion();
+	}
+
+	static void testConnexion() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+		EntityManager em = emf.createEntityManager();
+
+		System.out.println("test");
+
+		em.close();
+		emf.close();
+	}
+
+	static void testFind() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+		EntityManager em = emf.createEntityManager();
+
+		Employee p = em.find(Employee.class, 4);
+
+		em.close();
+		emf.close();
+	}
+	
+	static void testFindbyPersonne() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb3");
+		EntityManager em = emf.createEntityManager();
+
+
+		Query query = em.createQuery("SELECT p from Employee p");
+		List<Employee> list = query.getResultList();
+
+
+		em.close();
+		emf.close();
+	}
+	
+	static void testFindbyPC() {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb3");
+		EntityManager em = emf.createEntityManager();
+
+		Departement c = em.find(Departement.class, "1");
+//		System.out.println(c.getPersonne().getNom());
+
+		em.close();
+		emf.close();
+	}
+
+
+	static void testCreate() {
+		Departement dp = new Departement();
+		dp.setId(54);
+		dp.setName("meurthe-et-moselle");
+		Departement dp1 = new Departement();
+		dp1.setId(06);
+		dp1.setName("paca");
+		
+		Employee p = new Employee(1, "chien", "wolfie", dp);
+		Employee p2 = new Employee(2, "chien", "wolfie", dp);
+		Employee p3 = new Employee(3, "chien", "wolfie", dp);
+		
+		p.setDepartment(dp);
+		p2.setDepartment(dp1);
+		p3.setDepartment(dp);
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pdb4");
+		EntityManager em = emf.createEntityManager();
+
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.persist(dp);
+		em.persist(dp1);
+		em.persist(p);
+		em.persist(p2);
+		em.persist(p3);
+
+		tx.commit();
+
+		em.close();
+		emf.close();
+	}
+}
